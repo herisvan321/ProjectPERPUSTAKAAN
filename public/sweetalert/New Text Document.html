@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="sweetalert.min.js"></script>
+</head>
+<body>
+
+<script >
+
+swal({
+	title : "Hapus",
+	text : 'Apakah Anda Yakin Ingin Menghapus data ini?',
+	icon : "warning",
+	buttons : true,
+	dangerMode : true,
+})
+.then((hapus) => {
+	if(hapus) {
+		swal('data telah dihapus', {
+			icon :'success',
+			button : false,
+			timer : 1000
+		});
+	}
+	else{
+		swal('data di cancel',{
+			icon : "info"
+		});
+	}
+});
+</script>
+</body>
+</html>
